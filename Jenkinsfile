@@ -20,6 +20,11 @@ pipeline {
           sh 'pip install -r requirements.txt && python ${WORKSPACE}/src/test.py'
         }
       }
+    stage('test'){
+      steps {
+        sh 'python test.py')
+      }
+    } 
     stage('Docker Image') {
       steps{
         sh 'docker build -t personal-python-test'
