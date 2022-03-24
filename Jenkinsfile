@@ -29,7 +29,7 @@ pipeline {
     } 
     stage('Docker Image') {
       steps{
-        sh 'docker build -t personal-python-test'
+        sh 'docker build -t personal-python-test .'
       }
     }
     stage('RUN Image / Container Creation'){
